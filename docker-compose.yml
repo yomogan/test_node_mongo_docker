@@ -1,0 +1,17 @@
+version: '2'
+services:
+  node:
+    image: yomogan/yomogan_test_node_mongo
+    ports:
+      - "3000:3000"
+    networks:
+      - nodeapp-network
+    depends_on: 
+      - mongodb
+  mongodb:
+    image: mongo
+    networks:
+      - nodeapp-network
+networks:
+  nodeapp-network:
+    driver: bridge
