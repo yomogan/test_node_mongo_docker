@@ -1,7 +1,7 @@
 version: '2'
 services:
   node:
-    image: yomogan/2_node_mongo_ghub:test
+    image: yomogan/2_node_mongo_ghub:latest
     ports:
       - "3000:3000"
     networks:
